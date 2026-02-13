@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Favorite Person ❤️</title>
+    <style>
+        :root {
+            --pink: #ff4d6d;
+            --soft-pink: #fff0f3;
+            --dark-pink: #c9184a;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--soft-pink);
+            font-family: 'Georgia', serif;
+            color: var(--dark-pink);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            padding-bottom: 100px;
+        }
+
+        /* Floating Hearts Animation */
+        .heart-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            animation: fadeIn 2s;
+        }
+
+        h1 { font-size: 3rem; margin: 0; }
+        p { font-size: 1.2rem; font-style: italic; }
+
+        /* Polaroid Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            padding: 20px;
+            width: 90%;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 15px 15px 50px 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.4s;
+            position: relative;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .polaroid span {
+            display: block;
+            text-align: center;
+            padding-top: 15px;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.5rem;
+        }
+
+        .polaroid:nth-child(odd) { transform: rotate(-2deg); }
+        .polaroid:nth-child(even) { transform: rotate(2deg); }
+        .polaroid:hover { transform: scale(1.05) rotate(0deg); z-index: 5; }
+
+        /* Music & Interaction */
+        .controls {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        button {
+            background-color: var(--pink);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+            transition: 0.3s;
+        }
+
+        button:hover { background-color: var(--dark-pink); transform: translateY(-3px); }
+
+        #secret-message {
+            display: none;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div class="heart-bg" id="hearts"></div>
+
+    <header>
+        <h1>Happy Valentine's Day!</h1>
+        <p>Every moment with you is a favorite memory.</p>
+    </header>
+
+    <div class="gallery">
+        <div class="polaroid">
+            <img src="https://i.postimg.cc/QdVBdPWg/a6f38e59-95e5-4c8a-9256-3788c81c7fce.jpg" alt="Our Memory">
+            <span>I love the way youuu smile😘...</span>
+        </div>
+        <div class="polaroid">
+            <img src="https://i.postimg.cc/pdTBxq22/818B8EBF-FA6A-4796-93F7-CC6060EB550F.jpg" alt="Our Memory">
+            <span>My favorite place is next to you.</span>
+        </div>
+        <div class="polaroid">
+            <img src="https://i.postimg.cc/25DfKLmT/9698ae52-83ec-49ea-970d-da19df110a64.jpg" alt="Our Memory">
+            <span>She is the most beautiful women.</span>
+        </div>
+		<div class="polaroid">
+            <img src="https://i.postimg.cc/3RxVsgqd/6c74f333-3a6d-4e12-9423-119b45d3b0aa.jpg" alt="Our Memory">
+            <span>She eats food in the most cutest wayyy.</span>
+        </div>
+		<div class="polaroid">
+            <img src="https://i.postimg.cc/26tcggvM/02fefca1-9885-4deb-87a1-fb93c6235feb.jpg" alt="Our Memory">
+            <span>Many more good memories to follow nanna.</span>
+        </div>
+		<div class="polaroid">
+            <img src="https://i.postimg.cc/rmdXd19q/7a93d051-6003-4feb-95e4-1b88a9343cca.jpg" alt="Our Memory">
+            <span>One day this two hearts will become One.</span>
+        </div>
+		<div class="polaroid">
+            <img src="https://i.postimg.cc/ryW3vFnC/51f3663c-c9f1-4d93-a1ca-d19e223b00a1.jpg" alt="Our Memory">
+            <span>Gym important roii.</span>
+        </div>
+		<div class="polaroid">
+            <img src="https://i.postimg.cc/fbtBmB1f/91201c80-1b54-4eaf-b4d7-4be475255310.jpg" alt="Our Memory">
+            <span>nuv nenu vereyuu vereyu kadhu okati eh🥹.</span>
+        </div>
+		<div class="polaroid">
+            <img src="https://i.postimg.cc/wBpdGRH5/376743f2-1828-48dd-9b21-361431cbb0ec.jpg" alt="Our Memory">
+            <span>Na mahalakshmi</span>
+        </div>
+		<div class="polaroid">
+            <img src="https://i.postimg.cc/SKhJfKvf/51ae0288-5294-430f-9305-9029e4833aca.jpg" alt="Our Memory">
+            <span>Na bangaru bujjikondaaa❤️💕</span>
+        </div>
+		<div class="polaroid">
+            <img src="https://i.postimg.cc/HWRWtxJX/5989b8f5-05c3-436a-9feb-6c9c2ffd8fe2.jpg" alt="Doggy">
+            <span>Enni kastalu ochina elaga kalisi prema tho undali nanna..i pray for it🤗</span>
+        </div>
+		<div class="polaroid">
+            <img src="https://i.postimg.cc/2jLNCNTR/70bde441-1790-4249-a48e-d29f1a84cd17.jpg" alt="Doggy">
+            <span>Yes..we are the most stylish couple</span>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="toggleMusic()">🎵 Play Our Song</button>
+        <button onclick="showSecret()">💌 Open Surprise</button>
+        
+        <div id="secret-message">
+            <h3>To my dear doggy nanna,</h3>
+            <p>You have no idea nuv nak entha istam undhoo, i always love the most💖, we together will walk one day i promise..I wanted to create something special just for you. You make every day feel like Valentine's Day.</p>
+        </div>
+    </div>
+
+    <audio id="myAudio" loop>
+        <source src="https://files.catbox.moe/8pui4b.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function toggleMusic() {
+            var audio = document.getElementById("myAudio");
+            return audio.paused ? audio.play() : audio.pause();
+        }
+
+        function showSecret() {
+            var msg = document.getElementById("secret-message");
+            msg.style.display = "block";
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        // Create floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            heart.style.opacity = Math.random();
+            heart.style.transition = '4s';
+            document.getElementById('hearts').appendChild(heart);
+
+            setTimeout(() => {
+                heart.style.transform = `translateY(-110vh) rotate(${Math.random() * 360}deg)`;
+            }, 100);
+
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
